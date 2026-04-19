@@ -1,20 +1,25 @@
 <%-layout("/layouts/boilerplate") %>
-<h1 class="col-6 offset-3">Login</h1>
-<div class="row mt-3">
-  <div class="col-6 offset-3">
-    <form action="/login"  method="POST" class="needs-validation" novalidate >
-        <div  class="mb-3">
-            <label for="username" class="form-label">Username</label>
-            <input name="username" id="username" type ="text" class="form-control" required>
-            <div class="valid-feedback"> Looks good!</div>
-            </div>
+<!-- changed login page layout and added auth card style -->
+<section class="auth-page">
+  <div class="auth-card">
+    <h1>Welcome Back</h1>
+    <p class="text-center text-muted mb-4">Login to continue exploring the best stays and experiences.</p>
+    <form action="/login" method="POST" class="needs-validation" novalidate>
+      <div class="mb-4">
+        <label for="username" class="form-label">Username</label>
+        <input name="username" id="username" type="text" class="form-control" required>
+        <div class="valid-feedback">Looks good!</div>
+      </div>
 
-             <div  class="mb-3">
-            <label for="password" class="form-label">Password</label>
-            <input name="password" id="password" type ="password" class="form-control" required>
+      <div class="mb-4">
+        <label for="password" class="form-label">Password</label>
+        <input name="password" id="password" type="password" class="form-control" required>
+      </div>
 
-            </div>
-            <button class="btn btn-success">login</button>
-                </form>
-            </div>
-        </div>
+      <button class="btn btn-auth" type="submit">Login</button>
+    </form>
+    <div class="auth-footer">
+      <p>Don't have an account? <a href="/signup">Sign up</a></p>
+    </div>
+  </div>
+</section>
